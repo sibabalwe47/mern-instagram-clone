@@ -63,4 +63,11 @@ exports.addPostComment = asyncHandler(async (req,res) => {
         const updatedComments = post.save();
         res.json(post);
     }
+});
+
+exports.editPostComment = asyncHandler(async (req, res) => {
+    const post = await Post.findOne({_id: req.user._id && req.params.id});
+    if(post) {
+        console.log(req.body.comment)
+    }
 })

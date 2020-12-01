@@ -17,7 +17,10 @@ router.get("/:username", auth, PostController.getUserPosts);
 // Update User Post Caption
 router.post("/:id/caption", auth, PostController.editCaption);
 
-// Update User Post Comments
+// Add User Post Comments
 router.post("/:id/comments", auth, PostController.addPostComment)
+
+// Update User Post Comments
+router.post("/:id/comments/:commentId", auth, PostController.addPostComment)
 
 module.exports = router;
