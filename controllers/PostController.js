@@ -68,6 +68,22 @@ exports.addPostComment = asyncHandler(async (req,res) => {
 exports.editPostComment = asyncHandler(async (req, res) => {
     const post = await Post.findOne({_id: req.user._id && req.params.id});
     if(post) {
-        console.log(req.body.comment)
+        post.comments.forEach(c => {
+            if(c._id == req.params.commentId) {
+                c.text = req.body.text
+            }
+        });
+        const updatedComments = await post.save();
+        res.json(post);
+    }
+});
+
+exports.deletePostComment = asyncHandler(async (req, res) => {
+    const post = await Post.findOne({_id: req.user._id && req.params.id});
+    if(post) {
+        const comments = post.comments.filter(c => c._id != req.params.commentId);
+        post.comments = comments;
+        const updatedComments = await post.save();
+        res.json(post);
     }
 })

@@ -21,6 +21,9 @@ router.post("/:id/caption", auth, PostController.editCaption);
 router.post("/:id/comments", auth, PostController.addPostComment)
 
 // Update User Post Comments
-router.post("/:id/comments/:commentId", auth, PostController.addPostComment)
+router.put("/:id/comments/:commentId", auth, PostController.editPostComment)
+
+// Delete Use Post Comments
+router.delete("/:id/comments/:commentId", auth, PostController.deletePostComment);
 
 module.exports = router;
