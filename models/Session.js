@@ -4,11 +4,21 @@ const SessionSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId
     },
+    device: {
+        type: String,
+    },
+    os: {
+        type: String
+    },
     location: {
         type: String
     },
+    token: {
+        type: String,
+    },
     date: {
-        type: Date
+        type: Date,
+        default: Date.now()
     }
 },
 {

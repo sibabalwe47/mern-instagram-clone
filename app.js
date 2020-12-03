@@ -6,6 +6,11 @@ const bodyParser = require('body-parser');
 const { notFound, errorHandler } = require('./middleware/errorHandlers');
 const multer = require('multer');
 const upload = multer();
+const ddjs = require("device-detector-js");
+// const userAgent = 
+// const ddjsInstance = new ddjs();
+// const device = ddjsInstance.parse(userAgent);
+
 
 // Init 
 const app = express();
@@ -25,11 +30,13 @@ const user = require('./routes/api/auth');
 const profile =require('./routes/api/profile');
 const posts = require("./routes/api/posts");
 const uploads = require("./routes/api/uploads");
+const follow = require("./routes/api/follow");
 
 // Routes
 app.use("/api/auth", user);
 app.use("/api/profile", profile);
 app.use('/api/posts', posts);
+app.use('/api/follow', follow);
 
 // Error Handlers
 
