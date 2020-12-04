@@ -42,7 +42,7 @@ exports.getUserPosts = asyncHandler(async (req, res) => {
             return res.status(500).send('You have no posts yet')
         }
     } else {
-        res.status(500).send('User does not exist')
+       return res.status(500).send('User does not exist')
     }
     
 });

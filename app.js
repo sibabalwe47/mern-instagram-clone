@@ -31,12 +31,14 @@ const profile =require('./routes/api/profile');
 const posts = require("./routes/api/posts");
 const uploads = require("./routes/api/uploads");
 const follow = require("./routes/api/follow");
+const notifications = require("./routes/api/notifications");
 
 // Routes
 app.use("/api/auth", user);
 app.use("/api/profile", profile);
 app.use('/api/posts', posts);
 app.use('/api/follow', follow);
+app.use("/api/notifications", notifications);
 
 // Error Handlers
 
