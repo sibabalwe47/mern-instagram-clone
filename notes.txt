@@ -1,8 +1,0 @@
-
-File Upload — Express, MongoDB, Multer & S3 - Tyler Knapp
-https://levelup.gitconnected.com/file-upload-express-mongodb-multer-s3-7fad4dfb3789
-
-
-
-
-npm i --save dotenv aws-sdk multer multer-s3
