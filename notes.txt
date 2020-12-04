@@ -2,10 +2,7 @@
 File Upload — Express, MongoDB, Multer & S3 - Tyler Knapp
 https://levelup.gitconnected.com/file-upload-express-mongodb-multer-s3-7fad4dfb3789
 
-Access Key ID:
-AKIAIGDEB42FRE7VF5SQ
-Secret Access Key:
-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
+
 
 
 npm i --save dotenv aws-sdk multer multer-s3
